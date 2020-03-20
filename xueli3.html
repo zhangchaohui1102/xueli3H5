@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>xueli3</title>
+    <style>
+        .frame{
+            width:500px;
+        }
+        .text{
+            font-size: 18px;
+            color:red;
+        }
+        /* 边框 */
+        .option1{
+            border:1px solid #ceced3;
+        }
+        #color0{
+            margin-top:15px;
+            list-style: none;
+            padding:0px;
+        }
+        #color0 li{
+           display:inline;
+           margin-left: 20px;
+           position: relative;
+        }
+        .color1{
+            margin-top: 0px;
+            background-color: lightslategrey;
+        }
+        .color2{
+            margin-top: 0px;
+            background-color:magenta;
+        }
+        .color3{
+            margin-top: 0px;
+            background-color:pink;
+        }
+        .color4{
+            margin-top: 0px;
+            background-color:powderblue;
+        }
+        .color5{
+            margin-top: 0px;
+            background-color:yellow;
+        }
+        .color6{
+            margin-top: 0px;
+            background-color:greenyellow ;
+        }
+        #text2{
+            width:550px;
+        }
+    </style>
+</head>
+<body>
+    <div class="all">
+        <fieldset class="frame">
+            <legend class="text">网页换肤</legend>
+
+            <div class="option1">
+                <ul id="color0">
+                    <li class="color1" id="selected" title="灰色" onclick="fun1()" style="width:240px;">   &nbsp;&nbsp;  </li>
+                    <li class="color2" title="紫色" onclick="fun2()" >   &nbsp;&nbsp;  </li>
+                    <li class="color3" title="粉色" onclick="fun3()" >   &nbsp;&nbsp;  </li>
+                    <li class="color4" title="天蓝色" onclick="fun4()" >   &nbsp;&nbsp;  </li>
+                    <li class="color5" title="黄色" onclick="fun5()" >   &nbsp;&nbsp;  </li>
+                    <li class="color6" title="绿色" onclick="fun6()" >    &nbsp;&nbsp;&nbsp;  </li>
+                </ul>
+            </div>
+            <div id="text2">
+                <p>LocalStroage将数据保存在客户端本地的硬件设备中，即使浏览器被关闭了，该数据仍然存在，下次打开浏览器访问网站时仍然可以继续使用。</p>
+            </div>
+        </fieldset>
+    </fieldset>
+</body>
+    <script>
+        var color = window.localStorage.getItem("localColor");
+        var text2 = document.getElementById("text2");
+        window.onload = function(){
+            function fun1(){
+                var color1 = document.getElementsByClassName("color1");
+                color1.style.top = "10px";
+                text2.style.backgroundColor = "lightslategrey";
+                localStorage.setItem("localColor", "lightslategrey");
+            }
+            function fun2(){
+                var color2 = document.getElementsByClassName("color2");
+                color2.style.top = "10px";
+                text2.style.backgroundColor = "magenta";
+                localStorage.setItem("localColor", "magenta");
+            }
+            function fun3(){
+                var color3 = document.getElementsByClassName("color3");
+                color3.style.top = "10px";
+                text2.style.backgroundColor = "pink";
+                localStorage.setItem("localColor", "pink");
+            }
+            function fun4(){
+                var color4 = document.getElementsByClassName("color4");
+                color4.style.top = "10px";
+                text2.style.backgroundColor = "powderblue";
+                localStorage.setItem("localColor", "powderblue");
+            }
+            function fun5(){
+                var color5 = document.getElementsByClassName("color5");
+                color5.style.top = "10px";
+                text2.style.backgroundColor = "yellow";
+                localStorage.setItem("localColor", "yellow");
+            }
+            function fun6(){
+                var color6 = document.getElementsByClassName("color6");
+                color6.style.top = "10px";
+                text2.style.backgroundColor = "greenyello";
+                localStorage.setItem("localColor", "greenyello");
+            }
+        }
+    </script>
+</html>
